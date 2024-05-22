@@ -93,3 +93,32 @@ git commit -m "Initial commit"
 ```
 git push -u origin master
 ```
+
+
+// Job portal Applications
+
+
+// public Routes - No Authontication Required
+-[] user register
+-[] user login 
+-[] view All Jobs
+// private Router  - Authentication Required
+
+User Dashborad
+
+-[] user logout
+-[] user profile
+-[] update profile
+-[] delete profile
+-[] Apply jobs
+-[] View Apply for jobs
+
+Admin Dashborad
+
+-[] Add Company
+-[] delete Company
+-[] View All Company
+-[] Update Job
+-[] Add Job
+-[] delete Job
+-[] View all applications

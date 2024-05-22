@@ -91,6 +91,17 @@ const userController = {
             response.status(500).json({ message: error.message });
         }
     
+    },
+    //define  get user Method 
+
+    getUser:async (request,response) =>
+    {
+        try{
+
+        }catch(error)
+        {
+            response.status(500).join({message : error.message});
+        }
     }
 } 
 

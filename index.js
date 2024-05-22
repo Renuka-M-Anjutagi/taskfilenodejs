@@ -1,26 +1,18 @@
-// import the app module
-const app = require('./app');
+// File handeling
+const { error } = require('console');
+const fs = require('fs');
 
-// import the mongoose module
-const mongoose = require('mongoose');
+/// write file
 
-// log the message connecting to the MongoDB
-console.log('Connecting to MongoDB...');
+const data1 = Date();
 
-// import config module
-const config = require('./utils/config');
+fs.writeFile('date-time.txt', data1 , (err) => {
 
-mongoose.connect(config.MONGODB_URI)
-  .then(
-    () => {
-      console.log('Connected to MongoDB');
+  if(err){
+    console.log(err);
+    return;
+  }
+  console.log(data1);
+  console.log('File write successfully');
+});
 
-      // start the server
-      app.listen(3001, () => {
-        console.log('Server is running on http://localhost:3001');
-      });
-    }
-  )
-  .catch((error) => {
-    console.error('Error connecting to MongoDB: ', error.message);
-  });

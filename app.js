@@ -22,6 +22,7 @@ app.use(morgan('dev'));
 
 // defining the endpoints or routes
 app.use('/users', userRouter);
-
+app.use('/login', userRouter);
+app.use('/logout', userRouter);
 // export the app module
 module.exports = app;
